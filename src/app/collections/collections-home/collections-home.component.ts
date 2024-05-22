@@ -7,14 +7,16 @@ import { Component } from '@angular/core';
 })
 export class CollectionsHomeComponent {
   data = [
-    { name: 'Gianni', age: 47, job: 'Developer'},
-    { name: 'Piero', age: 40, job: 'Designer'},
-    { name: 'Sandra', age: 37, job: 'Project Manager'},
+    { name: 'Gianni', surname: 'Rossi', age: 47, job: 'Developer', employed: true },
+    { name: 'Piero', surname: 'Bianchi', age: 40, job: 'Designer', employed: false},
+    { name: 'Sandra', surname: 'Verdi', age: 37, job: 'Project Manager', employed: true},
   ];
 
   headers = [
     { key: 'name', label: 'Name'},
+    { key: 'surname', label: 'Surname'},
     { key: 'age', label: 'Age' },
-    { key: 'job', label: 'Job'}
+    { key: 'job', label: 'Job'},
+    { key: 'employed', label: 'Employed'}
   ];
 }

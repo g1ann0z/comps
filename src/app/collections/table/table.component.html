@@ -1,4 +1,4 @@
-<table class="ui table">
+<table class="ui table" [ngClass]="classNames">
     <thead>
         <tr>
             <th *ngFor="let header of headers">
@@ -7,8 +7,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td ></td>
+        <tr *ngFor="let record of data">
+            <td *ngFor="let header of headers">
+                {{ record[header.key] }}
+            </td>
         </tr>
     </tbody>
 </table>
