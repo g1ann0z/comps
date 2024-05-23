@@ -15,6 +15,11 @@ const routes: Routes = [
     .then(m => m.CollectionsModule) //lazy loading
   },
   {
+    path: 'views',
+    loadChildren: () => import('./views/views.module')
+    .then(m => m.ViewsModule) //lazy loading
+  },
+  {
     path: '',
     component: HomeComponent
   },
