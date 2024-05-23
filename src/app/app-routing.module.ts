@@ -20,6 +20,11 @@ const routes: Routes = [
     .then(m => m.ViewsModule) //lazy loading
   },
   {
+    path: 'mods',
+    loadChildren: () => import('./mods/mods.module')
+    .then(m => m.ModsModule) //lazy loading
+  },
+  {
     path: '',
     component: HomeComponent
   },
