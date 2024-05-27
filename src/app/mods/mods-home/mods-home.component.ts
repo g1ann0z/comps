@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './mods-home.component.css'
 })
 export class ModsHomeComponent {
+modalOpen = false;
+
+  onClick(){
+    this.modalOpen = !this.modalOpen;
+  }
 
 }
